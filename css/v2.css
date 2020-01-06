@@ -5,18 +5,18 @@ body{
     display: block;
     height: 50px;
     width: 136px;
-    background: url(../img/logo.svg) no-repeat;
+    background: url(../images/logo.svg) no-repeat;
     background-size: 100%;
     color: transparent;
     font-size: 0;
     line-height: 0;
 }
 .logo-negative{
-    background: url(../img/logo-negative.svg) no-repeat;
+    background: url(../images/logo-negative.svg) no-repeat;
 }
 
 header{
-    /* background-image:url(../img/Hero.jpg); */
+    /* background-image:url(../images/Hero.jpg); */
     background-size:cover;
     background-repeat: no-repeat;
     padding:3rem 0;
@@ -45,7 +45,7 @@ header{
     position: absolute;
     top: 0;
     width: 100%;
-    background-image: url(../img/Hero.jpg);
+    background-image: url(../images/Hero.jpg);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;

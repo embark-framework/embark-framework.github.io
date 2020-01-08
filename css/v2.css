@@ -3,8 +3,8 @@ body{
 }
 .top-logo{
     display: block;
-    height: 50px;
-    width: 136px;
+    height: 100px;
+    width: 300px;
     background: url(../images/logo.svg) no-repeat;
     background-size: 100%;
     color: transparent;
@@ -12,7 +12,7 @@ body{
     line-height: 0;
 }
 .logo-negative{
-    background: url(../images/logo-negative.svg) no-repeat;
+    background: url(../images/Embark_Logo-01-01.svg) no-repeat;
 }
 
 header{
@@ -34,6 +34,15 @@ header{
     border-radius: 5px;	
     padding: .9rem 2rem;
     background-color: #FAB266;
+    transition:.2s ease;
+    border: 1px solid transparent;
+}
+.orange-cta-lg:hover {
+    transition:.2s ease;
+    color: #FAB266;
+    background-color:transparent;
+    text-decoration:none;
+    border: 1px solid #FAB266;
 }
 .pos-rel{
     position: relative;
@@ -147,7 +156,31 @@ header{
 .right-tool{
     background-image: url(../images/rt-bg.jpg);
     background-size:cover;
-    padding: 4rem 0 3rem 0;
+    padding: 6rem 0 0rem 0;
+    height: 100vh;
+    position:relative;
+}
+.righttool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    min-height: 100vh;
+    padding: 6rem 0 6rem 0;
+    background-image: url(../images/rt-bg.jpg);
+    background-size:cover;
+    align-items: center;
+    position:relative;
+}
+.explore-more{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding-bottom: 3rem;
 }
 .right-tool-header {
     font-size: 76px;
@@ -169,12 +202,14 @@ header{
     margin-bottom: 5rem;
 }
 .scroll{}
-.scroll img{}
-.scroll p{
+.scroll img{
+    opacity:.41;
+}
+.scroll p {
     font-size: 12px;
     font-style: italic;
-    margin-top:10px;
-    color: #020202;
+    margin-top: 10px;
+    color: rgba(2, 2, 2, 0.41);
     letter-spacing: 0;
     text-align: center;
 }
@@ -182,7 +217,7 @@ header{
     content: '';
     width: 100%;
     height: 100%;
-    background-color: #EAECEF !important;
+    background-color: #FFF !important;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -217,6 +252,15 @@ header{
     border-radius: 5px;
     padding: .9rem 2rem;
     background-color: #FFF;
+    transition:.2s ease;
+    border:1px solid transparent;
+}
+.white-cta-lg:hover{
+    text-decoration: none;
+    transition:.2s ease;
+    background-color:transparent;
+    border:1px solid #FFF;
+    color: #FFF;
 }
 .explore-content {
     -webkit-animation: float2 6s ease-in-out;
@@ -240,9 +284,11 @@ header{
 .start {
     background-image: url(../images/JoinCommunity_Embark.jpg);
     background-size: cover;
-    height: 695px;
+    min-height: 695px;
+    height:100vh;
     position: relative;
     /* margin-top: -47px; */
+    z-index: 99;
 }
 .start h2 {
     max-width: 374px;
@@ -353,16 +399,17 @@ header{
 }
 .rocket-ship img{
     position: absolute;
-    z-index: 9;
+    z-index: -5;
     bottom: 0;
     width: 100%;
+    bottom: -107px;
 }
 .subForm {
     max-width: 725px;
     margin: 0 auto 0 auto;
 }
 footer {
-    background-color: #5D7D97;
+    background-color: #01264D;
     position: relative;
     z-index: 999;
 }
@@ -388,6 +435,13 @@ footer {
     font-size: 18px;
     font-weight: bold;
     line-height: 21px;
+    transition:.2s ease;
+    opacity:1;
+}
+.footer-links ul li a:hover {
+    transition:.2s ease;
+    text-decoration:none;
+    opacity:.7;
 }
 .footer-astro {
     position: absolute;
@@ -395,6 +449,10 @@ footer {
     top: 18rem;
     max-width: 42%;
     left: 6%;
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+    -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 .disable-desktop{
     display: none;
@@ -402,16 +460,56 @@ footer {
 .disable-mobile{
     display: block;
 }
+.footer-links ul li a.top-logo {
+    height: 100px;
+    width: 129px;
+    margin:0 auto;
+}
+@media only screen and (max-width: 1200px) {
+    .explore-content {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
+    .footer-links ul li {
+        padding: 0 18px;
+        padding-top: 1rem;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    .rocket-ship img{
+        bottom: -79px;
+    }
+}
 @media only screen and (max-width: 1024px) {
+    .footer-links ul li {
+        padding: 0 18px;
+        padding-top: 1rem;
+    }
     .footer-astro {
         left: 1%;
     }
     #questions {
         height: 700px;
     }
+    .explore-content {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
 }
-
 @media only screen and (max-width: 991px) {
+    .footer-links .container{
+        max-width:100%;
+    }
+    .footer-links ul li a {
+        font-size: 16px;
+    }
+    .explore-more {
+        position: relative;
+    }
+    .right-tool {
+        height: 100%;
+        position: relative;
+    }
     .subEmailInput {
         width: 239px !important;
     }
@@ -419,9 +517,28 @@ footer {
         font-size: 65px;
         line-height: 64px;
     }
+    .explore-content h3 {
+        font-size: 40px;
+    }
+    .explore-content p {
+        font-size: 20px;
+    }
+    .explore-content {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
 }
-
+@media only screen and (max-width: 840px) {
+    .rocket-ship img{
+        bottom: -55px;
+    }
+}
 @media only screen and (max-width: 768px) {
+    .footer-links ul li {
+        padding: 0 18px;
+        padding-top: 1rem;
+        display: block;
+    }
     .c-header__background {
         background-position: bottom;
     }
@@ -469,6 +586,9 @@ footer {
     }
 }
 @media only screen and (max-width: 600px) {
+    .rocket-ship img{
+        bottom: 0;
+    }
     .c-header__background {
         background-position: center;
     }
@@ -546,7 +666,6 @@ footer {
         height: 400px;
     }
 }
-
 @media only screen and (max-width: 375px) {
     .c-header__background {
         background-position: center;

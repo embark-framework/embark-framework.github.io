@@ -491,10 +491,8 @@ header{
 }
 
 #eci {
-    background-color: white;
     padding: 4rem 0;
     position: relative;
-    margin-top: -24px;
 }
 .companiesHeader {
     font-family: 'Roboto', sans-serif;
@@ -880,7 +878,7 @@ footer {
 @media (max-width:1200px){
 	.mainNav li {
 		padding: 0 1.5rem;
-	}
+    }
 }
 @media (max-width:991px){
 	.onlyMobile{
@@ -888,5 +886,23 @@ footer {
 	}
 	.onlyDesktop{
 		display:none;
-	}
+    }
+}
+
+.text-gray-blue {
+    color:#5D7D97 !important;
+}
+
+.meet-the-team-heading {
+    color:#0B476D !important;
+    font-weight: 800;
+    font-size: 50px
+}
+
+.hover-shadow:hover{
+    text-decoration: none;
+}
+
+.gradient-hex {
+    margin-top: -700px;
 }
